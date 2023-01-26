@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .catch((err) => console.error(err));
   generateQuote(5000, quotes);
-
   const button = document.querySelector('#button');
   button.addEventListener('click', function () {
     var countdown = document.querySelector('#countdown');
@@ -21,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     startTimer();
   });
 });
+
 
 let timeIsRunning = false;
 const FULL_DASH_ARRAY = 503;
@@ -31,6 +31,8 @@ let timePassed = 0;
 
 function startTimer() {
   button.style.visibility = 'hidden';
+  document.querySelector('h1').innerText = 'Mindfulness Now';
+  document.querySelector('#quote-container').style.visibility = 'hidden';
   timer = setInterval(() => {
     timeLeft--;
     setCircleDasharray();
@@ -43,7 +45,9 @@ function startTimer() {
 function stopTimer() {
   clearInterval(timer);
   countdown.style.visibility = 'hidden';
+  document.querySelector('#quote-container').style.visibility = 'visible';
   button.style.visibility = 'visible';
+  document.querySelector('h1').innerText = 'Daily Inspiration';
   timeLeft = DURATION;
   timePassed = 0;
 }

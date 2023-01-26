@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Healthy Reminders",
+    "name": "Daily Inspiration, Mindfulness Now",
     "version": "1.0",
-    "description": "Reminders to keep your spirits lifted",
+    "description": "An extension to provide inspiring and motivational quotes and a space to refocus attention",
     "action": {
         "default_popup": "index.html"
     },
