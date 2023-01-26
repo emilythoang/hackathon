@@ -6,6 +6,9 @@
     "action": {
         "default_popup": "index.html"
     },
+    "icons": {
+        "128": "Mindfulness-PNG-Picture.png"
+      },
     "permissions": [
         "activeTab"
     ]
