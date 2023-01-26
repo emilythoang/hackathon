@@ -9,6 +9,8 @@ body {
     color: #fefcfb;
     min-width: 300px;
     border-radius: 8px;
+    height: 100%;
+    background-color: #333;
 }
 
 h1 {
@@ -17,10 +19,12 @@ h1 {
 
 #quote {
     padding: 10px;
+    font-size: 18px;
 }
 
 #author {
     padding: 10px;
+    font-size: 16px;
 }
 
 #button {
@@ -31,17 +35,13 @@ h1 {
     border: 1px solid #fddb92;
     border-color: #fddb92;
     color: #fefcfb;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 #button:hover {
     background-color: #fddb92;
     color: #0c0628;
-}
-
-body {
-    height: 100%;
-    width: 100%;
-    background-color: #333;
 }
 
 #countdown {
@@ -51,7 +51,7 @@ body {
     position: relative;
     padding: 10px;
     text-align: center;
-    visibility: hidden;
+    display: none;
 }
 
 svg {

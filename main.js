@@ -16,27 +16,26 @@ document.addEventListener('DOMContentLoaded', function () {
   const button = document.querySelector('#button');
   button.addEventListener('click', function () {
     var countdown = document.querySelector('#countdown');
-    countdown.style.visibility = 'visible';
     startTimer();
   });
 });
 
-
 let timeIsRunning = false;
 const FULL_DASH_ARRAY = 503;
 let timer;
-const DURATION = 30;
+const DURATION = 20;
 let timeLeft = DURATION;
 let timePassed = 0;
 
 function startTimer() {
-  button.style.visibility = 'hidden';
+  countdown.style.display = 'block';
+  button.style.display = 'none';
+  document.querySelector('#quote-container').style.display = 'none';
   document.querySelector('h1').innerText = 'Mindfulness Now';
-  document.querySelector('#quote-container').style.visibility = 'hidden';
   timer = setInterval(() => {
     timeLeft--;
     setCircleDasharray();
-    if (timeLeft === 0) {
+    if (timeLeft < 0) {
       stopTimer();
     }
   }, 1000);
@@ -44,12 +43,13 @@ function startTimer() {
 
 function stopTimer() {
   clearInterval(timer);
-  countdown.style.visibility = 'hidden';
-  document.querySelector('#quote-container').style.visibility = 'visible';
-  button.style.visibility = 'visible';
+  countdown.style.display = 'none';
+  document.querySelector('#quote-container').style.display = 'block';
+  button.style.display = 'block';
   document.querySelector('h1').innerText = 'Daily Inspiration';
   timeLeft = DURATION;
   timePassed = 0;
+  document.querySelector('#circle').style.strokeDasharray = FULL_DASH_ARRAY;
 }
 
 function setCircleDasharray() {
