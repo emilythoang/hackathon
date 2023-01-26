@@ -1,8 +1,14 @@
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     background-image: linear-gradient(to top, #fddb92 0%, #0c0628 100%);
     font-family: 'Lato', sans-serif;
     color: #fefcfb;
+    min-width: 300px;
+    border-radius: 8px;
 }
 
 h1 {
@@ -32,12 +38,6 @@ h1 {
     color: #0c0628;
 }
 
-#countdown {
-    /* visibility: hidden; */
-}
-
-
-
 body {
     height: 100%;
     width: 100%;
@@ -49,99 +49,23 @@ body {
     align-items: flex;
     justify-content: center;
     position: relative;
-    margin: auto;
     padding: 10px;
-    /* margin-top: 100px; */
-    height: 100px;
-    width: 100px;
     text-align: center;
+    visibility: hidden;
 }
 
 svg {
     position: relative;
-    /* top: 0;
-    right: 0; */
     width: 200px;
     height: 200px;
     transform: rotateY(-180deg) rotateZ(-90deg);
 }
 
-svg circle {
-    stroke-dasharray: 283px;
-    stroke-dashoffset: 0px;
+#circle {
+    stroke-dasharray: 503;
     stroke-linecap: round;
-    stroke-width: 7px;
+    stroke-width: 8px;
     stroke: white;
     fill: none;
-    animation: countdown 60s linear forwards;
-}
-
-@keyframes countdown {
-    from {
-        stroke-dashoffset: 0px;
-    }
-
-    to {
-        stroke-dashoffset: 283px;
-    }
-}
-
-/* 
-2nd circle
-#circle {
-    --a: 360deg;
-    position: relative;
-    width: 20em;
-    height: 20em;
-    border-radius: 50%;
-    transition: --a 1s linear;
-    background: conic-gradient(#8b8bff var(--a), #8b8bff 0deg, #585862d5 0deg, #585862d5 360deg);
-    animation: animations 2s linear 1 forward;
-}
-
-#circle::before {
-    position: absolute;
-    content: "";
-    width: 95%;
-    height: 95%;
-    background: transparent;
-    fill: none;
-    border-radius: 50%;
-    left: 50%;
-    top: 50%;
-    color: #fac7c78f;
-    transform: translate(-50%, -50%);
-}
- */
-
-/*1st circle
-
-#circle {
-    position: relative;
-    height: 300 px;
-    width: 300 px;
-}
-
-.base-timer__circle {
-    fill: none;
-    stroke: none;
-}
-
-.base-timer__path-elapsed {
-    stroke-width: 7px;
-    stroke: grey;
-}
-
-.base-timer__path-remaining {
-    stroke-width: 7px;
-    stroke-linecap: round;
-    transform: rotate(90deg);
-    transform-origin: center;
     transition: 1s linear all;
-    stroke: currentColor;
 }
-
-.base-timer__svg {
-    transform: scaleX(-1);
-}
-*/

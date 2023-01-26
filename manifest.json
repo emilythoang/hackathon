@@ -3,10 +3,10 @@
     "name": "Healthy Reminders",
     "version": "1.0",
     "description": "Reminders to keep your spirits lifted",
-     "action": {
+    "action": {
         "default_popup": "index.html"
-     },
-     "permissions": [
+    },
+    "permissions": [
         "activeTab"
-     ]
+    ]
 }
